@@ -1,0 +1,1641 @@
+{
+    "modelName": "spotify_create_db",
+    "collections": [
+        {
+            "collectionName": "usuaris",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "isPremium",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "boolean",
+                    "GUID": "c2b27d20-582e-11ec-bf49-67febb127f1a",
+                    "required": true
+                },
+                {
+                    "code": "",
+                    "name": "userId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": true,
+                    "GUID": "e4776e01-5821-11ec-a0ad-b92a626df742",
+                    "childRelationships": [
+                        "e4771feb-5821-11ec-a0ad-b92a626df742",
+                        "ead7a130-582f-11ec-bf49-67febb127f1a",
+                        "8af810e0-584a-11ec-bf49-67febb127f1a",
+                        "a580dcc0-584b-11ec-bf49-67febb127f1a",
+                        "042030a0-584c-11ec-bf49-67febb127f1a",
+                        "30811f10-584c-11ec-bf49-67febb127f1a"
+                    ],
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "email",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "e4776e03-5821-11ec-a0ad-b92a626df742",
+                    "pattern": "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"
+                },
+                {
+                    "code": "",
+                    "name": "password",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "e4776e05-5821-11ec-a0ad-b92a626df742"
+                },
+                {
+                    "code": "",
+                    "name": "username",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "e4779510-5821-11ec-a0ad-b92a626df742"
+                },
+                {
+                    "code": "",
+                    "name": "dataNaixament",
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "required": true,
+                    "default": "",
+                    "GUID": "e4779512-5821-11ec-a0ad-b92a626df742",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "sexe",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "primaryKey": false,
+                    "GUID": "e4779514-5821-11ec-a0ad-b92a626df742",
+                    "error": {
+                        "enum": false,
+                        "enums": [
+                            false,
+                            false
+                        ],
+                        "exampleItems": [
+                            false,
+                            false
+                        ]
+                    },
+                    "enum": [
+                        "Masculí",
+                        "Femení"
+                    ]
+                },
+                {
+                    "code": "",
+                    "name": "pais",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "e4779516-5821-11ec-a0ad-b92a626df742"
+                },
+                {
+                    "code": "",
+                    "name": "codiPostal",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "e4779518-5821-11ec-a0ad-b92a626df742"
+                },
+                {
+                    "name": "canconsFavorites",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "609eff30-5830-11ec-bf49-67febb127f1a",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "mode": "integer32",
+                            "minimum": 1,
+                            "relationshipType": "Foreign Key",
+                            "foreignCollection": "e47969d4-5821-11ec-a0ad-b92a626df742",
+                            "foreignField": [
+                                "e47969d4-5821-11ec-a0ad-b92a626df742",
+                                "e47969d7-5821-11ec-a0ad-b92a626df742"
+                            ],
+                            "parentRelationship": "d8a15a40-584a-11ec-bf49-67febb127f1a"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "60984870-5830-11ec-bf49-67febb127f1a",
+                    "uniqueItems": true
+                },
+                {
+                    "name": "albumsFavorits",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "5af8ff00-5848-11ec-bf49-67febb127f1a",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "mode": "integer32",
+                            "minimum": 1,
+                            "relationshipType": "Foreign Key",
+                            "foreignCollection": "e47942c4-5821-11ec-a0ad-b92a626df742",
+                            "foreignField": [
+                                "e47942c4-5821-11ec-a0ad-b92a626df742",
+                                "e47942c7-5821-11ec-a0ad-b92a626df742"
+                            ],
+                            "parentRelationship": "5078ac80-584b-11ec-bf49-67febb127f1a"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "5af2e480-5848-11ec-bf49-67febb127f1a",
+                    "uniqueItems": true
+                },
+                {
+                    "name": "seguinArtistes",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "b66f9ba0-5848-11ec-bf49-67febb127f1a",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "mode": "integer32",
+                            "minimum": 1,
+                            "relationshipType": "Foreign Key",
+                            "foreignCollection": "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                            "foreignField": [
+                                "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                                "e478f4a2-5821-11ec-a0ad-b92a626df742"
+                            ],
+                            "parentRelationship": "59c72e60-584b-11ec-bf49-67febb127f1a"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "b66896c0-5848-11ec-bf49-67febb127f1a",
+                    "uniqueItems": true
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "e47746f1-5821-11ec-a0ad-b92a626df742"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "e47746f0-5821-11ec-a0ad-b92a626df742",
+            "code": "",
+            "bucketId": "e44cdb90-5821-11ec-a0ad-b92a626df742",
+            "comments": "",
+            "description": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        },
+        {
+            "collectionName": "suscripcions",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "",
+                    "name": "userId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "e478a687-5821-11ec-a0ad-b92a626df742",
+                    "minimum": 1,
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+                    "foreignField": [
+                        "e47746f0-5821-11ec-a0ad-b92a626df742",
+                        "e4776e01-5821-11ec-a0ad-b92a626df742"
+                    ],
+                    "parentRelationship": "ead7a130-582f-11ec-bf49-67febb127f1a"
+                },
+                {
+                    "code": "",
+                    "name": "dataInici",
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "required": true,
+                    "default": "",
+                    "GUID": "e478cd92-5821-11ec-a0ad-b92a626df742",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "dataRenovacio",
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "required": true,
+                    "default": "",
+                    "GUID": "e478cd94-5821-11ec-a0ad-b92a626df742",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "formaPagament",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "primaryKey": false,
+                    "GUID": "e478cd96-5821-11ec-a0ad-b92a626df742",
+                    "error": {
+                        "enum": false,
+                        "enums": [
+                            false,
+                            false
+                        ],
+                        "exampleItems": [
+                            false,
+                            false
+                        ]
+                    },
+                    "enum": [
+                        "Targeta de crèdit",
+                        "PayPal"
+                    ]
+                },
+                {
+                    "type": "document",
+                    "properties": [
+                        {
+                            "code": "",
+                            "name": "orderId",
+                            "isActivated": true,
+                            "type": "numeric",
+                            "required": true,
+                            "mode": "integer32",
+                            "primaryKey": false,
+                            "GUID": "1403bfe0-582f-11ec-bf49-67febb127f1a",
+                            "childRelationships": [],
+                            "minimum": 1,
+                            "error": {}
+                        },
+                        {
+                            "code": "",
+                            "name": "dataPagament",
+                            "isActivated": true,
+                            "type": "date",
+                            "primaryKey": false,
+                            "required": true,
+                            "default": "",
+                            "GUID": "1403bfe1-582f-11ec-bf49-67febb127f1a",
+                            "error": {}
+                        },
+                        {
+                            "code": "",
+                            "name": "total",
+                            "isActivated": true,
+                            "type": "numeric",
+                            "required": true,
+                            "mode": "double",
+                            "primaryKey": false,
+                            "GUID": "1403bfe2-582f-11ec-bf49-67febb127f1a",
+                            "minimum": 10,
+                            "maximum": 100
+                        },
+                        {
+                            "code": "",
+                            "name": "paypalUsername",
+                            "isActivated": true,
+                            "type": "string",
+                            "required": false,
+                            "maxLength": 50,
+                            "primaryKey": false,
+                            "GUID": "923225f0-582f-11ec-bf49-67febb127f1a",
+                            "hackoladeMeta": {},
+                            "foreignCollection": "",
+                            "foreignField": []
+                        },
+                        {
+                            "name": "creditCard",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "document",
+                            "properties": [
+                                {
+                                    "code": "",
+                                    "name": "numeroTargeta",
+                                    "isActivated": true,
+                                    "type": "string",
+                                    "required": true,
+                                    "maxLength": 50,
+                                    "primaryKey": false,
+                                    "GUID": "bc0b7f20-582f-11ec-bf49-67febb127f1a",
+                                    "hackoladeMeta": {},
+                                    "foreignCollection": "",
+                                    "foreignField": [],
+                                    "error": {}
+                                },
+                                {
+                                    "code": "",
+                                    "name": "caducitat",
+                                    "isActivated": true,
+                                    "type": "date",
+                                    "primaryKey": false,
+                                    "required": true,
+                                    "default": "",
+                                    "GUID": "bf00a340-582f-11ec-bf49-67febb127f1a",
+                                    "error": {
+                                        "name": false,
+                                        "code": false
+                                    },
+                                    "hackoladeMeta": {},
+                                    "foreignCollection": "",
+                                    "foreignField": []
+                                },
+                                {
+                                    "code": "",
+                                    "name": "cvc",
+                                    "isActivated": true,
+                                    "type": "string",
+                                    "required": true,
+                                    "maxLength": 4,
+                                    "primaryKey": false,
+                                    "GUID": "c26c56f0-582f-11ec-bf49-67febb127f1a",
+                                    "error": {
+                                        "name": false,
+                                        "code": false
+                                    },
+                                    "hackoladeMeta": {},
+                                    "foreignCollection": "",
+                                    "foreignField": []
+                                }
+                            ],
+                            "additionalProperties": false,
+                            "GUID": "acb960a0-582f-11ec-bf49-67febb127f1a",
+                            "error": {}
+                        }
+                    ],
+                    "additionalProperties": false,
+                    "GUID": "14034ab0-582f-11ec-bf49-67febb127f1a",
+                    "name": "pagaments",
+                    "required": true,
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "e478a685-5821-11ec-a0ad-b92a626df742"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [
+                {
+                    "GUID": "e478cd99-5821-11ec-a0ad-b92a626df742",
+                    "name": "fk_suscripcions_pagaments1_idx",
+                    "key": [],
+                    "unique": false
+                },
+                {
+                    "GUID": "e478cd9a-5821-11ec-a0ad-b92a626df742",
+                    "name": "fk_suscripcions_usuaris_premium1_idx",
+                    "key": [],
+                    "unique": false
+                }
+            ],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "e478a684-5821-11ec-a0ad-b92a626df742",
+            "code": "",
+            "bucketId": "e44cdb90-5821-11ec-a0ad-b92a626df742",
+            "comments": "",
+            "description": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        },
+        {
+            "collectionName": "artista",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "",
+                    "name": "artistaId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": true,
+                    "GUID": "e478f4a2-5821-11ec-a0ad-b92a626df742",
+                    "childRelationships": [
+                        "e4771fe9-5821-11ec-a0ad-b92a626df742",
+                        "59c72e60-584b-11ec-bf49-67febb127f1a",
+                        "0c1a4610-584c-11ec-bf49-67febb127f1a"
+                    ],
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "nom",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "e478f4a4-5821-11ec-a0ad-b92a626df742"
+                },
+                {
+                    "code": "",
+                    "name": "imatgeArtista",
+                    "isActivated": true,
+                    "type": "binary",
+                    "primaryKey": false,
+                    "required": true,
+                    "GUID": "e478f4a6-5821-11ec-a0ad-b92a626df742",
+                    "error": {}
+                },
+                {
+                    "name": "usuarisSeguidors",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "d624d370-5848-11ec-bf49-67febb127f1a",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "mode": "integer32",
+                            "minimum": 1,
+                            "relationshipType": "Foreign Key",
+                            "foreignCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+                            "foreignField": [
+                                "e47746f0-5821-11ec-a0ad-b92a626df742",
+                                "e4776e01-5821-11ec-a0ad-b92a626df742"
+                            ],
+                            "parentRelationship": "042030a0-584c-11ec-bf49-67febb127f1a"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "d61eb8f0-5848-11ec-bf49-67febb127f1a",
+                    "uniqueItems": true
+                },
+                {
+                    "name": "artistesRelacionats",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "ec8ce8f0-5848-11ec-bf49-67febb127f1a",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "mode": "integer32",
+                            "minimum": 1,
+                            "relationshipType": "Foreign Key",
+                            "foreignCollection": "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                            "foreignField": [
+                                "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                                "e478f4a2-5821-11ec-a0ad-b92a626df742"
+                            ],
+                            "parentRelationship": "0c1a4610-584c-11ec-bf49-67febb127f1a"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "ec86a760-5848-11ec-bf49-67febb127f1a",
+                    "uniqueItems": true
+                },
+                {
+                    "name": "albums",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "502631a0-5849-11ec-bf49-67febb127f1a",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "mode": "integer32",
+                            "minimum": 1,
+                            "relationshipType": "Foreign Key",
+                            "foreignCollection": "e47942c4-5821-11ec-a0ad-b92a626df742",
+                            "foreignField": [
+                                "e47942c4-5821-11ec-a0ad-b92a626df742",
+                                "e47942c7-5821-11ec-a0ad-b92a626df742"
+                            ],
+                            "parentRelationship": "144137e0-584c-11ec-bf49-67febb127f1a"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "501fc900-5849-11ec-bf49-67febb127f1a",
+                    "uniqueItems": true
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "e478f4a0-5821-11ec-a0ad-b92a626df742"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "e478cd9b-5821-11ec-a0ad-b92a626df742",
+            "code": "",
+            "bucketId": "e44cdb90-5821-11ec-a0ad-b92a626df742",
+            "comments": "",
+            "description": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        },
+        {
+            "collectionName": "album",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "",
+                    "name": "albumId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": true,
+                    "GUID": "e47942c7-5821-11ec-a0ad-b92a626df742",
+                    "childRelationships": [
+                        "e4771fea-5821-11ec-a0ad-b92a626df742",
+                        "5078ac80-584b-11ec-bf49-67febb127f1a",
+                        "144137e0-584c-11ec-bf49-67febb127f1a"
+                    ],
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "artistaId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "e47942c9-5821-11ec-a0ad-b92a626df742",
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "e4771fe9-5821-11ec-a0ad-b92a626df742",
+                    "foreignCollection": "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                    "foreignField": [
+                        "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                        "e478f4a2-5821-11ec-a0ad-b92a626df742"
+                    ],
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "titol",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "e47942cb-5821-11ec-a0ad-b92a626df742"
+                },
+                {
+                    "code": "",
+                    "name": "anyPublicacio",
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "required": true,
+                    "default": "",
+                    "GUID": "e47942cd-5821-11ec-a0ad-b92a626df742",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "imatgePortada",
+                    "isActivated": true,
+                    "type": "binary",
+                    "primaryKey": false,
+                    "required": true,
+                    "GUID": "e47969d1-5821-11ec-a0ad-b92a626df742",
+                    "error": {}
+                },
+                {
+                    "name": "favoritDeUsuari",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "7069e340-5848-11ec-bf49-67febb127f1a",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "mode": "integer32",
+                            "minimum": 1,
+                            "relationshipType": "Foreign Key",
+                            "foreignCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+                            "foreignField": [
+                                "e47746f0-5821-11ec-a0ad-b92a626df742",
+                                "e4776e01-5821-11ec-a0ad-b92a626df742"
+                            ],
+                            "parentRelationship": "a580dcc0-584b-11ec-bf49-67febb127f1a"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "70632c80-5848-11ec-bf49-67febb127f1a",
+                    "uniqueItems": true
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "e47942c5-5821-11ec-a0ad-b92a626df742"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [
+                {
+                    "GUID": "e47969d3-5821-11ec-a0ad-b92a626df742",
+                    "name": "fk_album_artista1_idx",
+                    "key": [],
+                    "unique": false
+                }
+            ],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "e47942c4-5821-11ec-a0ad-b92a626df742",
+            "code": "",
+            "bucketId": "e44cdb90-5821-11ec-a0ad-b92a626df742",
+            "comments": "",
+            "description": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        },
+        {
+            "collectionName": "cancons",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "",
+                    "name": "cancoId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": true,
+                    "GUID": "e47969d7-5821-11ec-a0ad-b92a626df742",
+                    "minimum": 1,
+                    "childRelationships": [
+                        "d8a15a40-584a-11ec-bf49-67febb127f1a",
+                        "f8a5c380-584a-11ec-bf49-67febb127f1a",
+                        "2b1b6590-584b-11ec-bf49-67febb127f1a"
+                    ]
+                },
+                {
+                    "code": "",
+                    "name": "albumId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "e47969d9-5821-11ec-a0ad-b92a626df742",
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "e4771fea-5821-11ec-a0ad-b92a626df742",
+                    "foreignCollection": "e47942c4-5821-11ec-a0ad-b92a626df742",
+                    "foreignField": [
+                        "e47942c4-5821-11ec-a0ad-b92a626df742",
+                        "e47942c7-5821-11ec-a0ad-b92a626df742"
+                    ],
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "titol",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "e47969db-5821-11ec-a0ad-b92a626df742"
+                },
+                {
+                    "code": "",
+                    "name": "duracioEnMilisegons",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "e47990e1-5821-11ec-a0ad-b92a626df742",
+                    "minimum": 1,
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "vegadesReproduida",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "e47990e3-5821-11ec-a0ad-b92a626df742",
+                    "minimum": 0,
+                    "error": {}
+                },
+                {
+                    "name": "favoritaDeUsuari",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "2415f0b0-5848-11ec-bf49-67febb127f1a",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "mode": "integer32",
+                            "minimum": 1,
+                            "relationshipType": "Foreign Key",
+                            "foreignCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+                            "foreignField": [
+                                "e47746f0-5821-11ec-a0ad-b92a626df742",
+                                "e4776e01-5821-11ec-a0ad-b92a626df742"
+                            ],
+                            "parentRelationship": "30811f10-584c-11ec-bf49-67febb127f1a"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "240ec4c0-5848-11ec-bf49-67febb127f1a",
+                    "uniqueItems": true
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "e47969d5-5821-11ec-a0ad-b92a626df742"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [
+                {
+                    "GUID": "e479b7f1-5821-11ec-a0ad-b92a626df742",
+                    "name": "fk_cancons_album1_idx",
+                    "key": [],
+                    "unique": false
+                }
+            ],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "e47969d4-5821-11ec-a0ad-b92a626df742",
+            "code": "",
+            "bucketId": "e44cdb90-5821-11ec-a0ad-b92a626df742",
+            "comments": "",
+            "description": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        },
+        {
+            "collectionName": "playlists",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "",
+                    "name": "playlistId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": true,
+                    "GUID": "e479b7f5-5821-11ec-a0ad-b92a626df742",
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "userId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "e479b7f7-5821-11ec-a0ad-b92a626df742",
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "e4771feb-5821-11ec-a0ad-b92a626df742",
+                    "foreignCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+                    "foreignField": [
+                        "e47746f0-5821-11ec-a0ad-b92a626df742",
+                        "e4776e01-5821-11ec-a0ad-b92a626df742"
+                    ],
+                    "minimum": 1,
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "titol",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "e479b7f9-5821-11ec-a0ad-b92a626df742"
+                },
+                {
+                    "name": "isDeleted",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "boolean",
+                    "GUID": "ba59d8b0-5849-11ec-bf49-67febb127f1a",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "nombreDeCancons",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "e479df00-5821-11ec-a0ad-b92a626df742",
+                    "minimum": 0,
+                    "maximum": 10000
+                },
+                {
+                    "code": "",
+                    "name": "dataCreacio",
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "required": true,
+                    "default": "",
+                    "GUID": "e479df02-5821-11ec-a0ad-b92a626df742",
+                    "error": {}
+                },
+                {
+                    "name": "cancons",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "017c99d0-584a-11ec-bf49-67febb127f1a",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "mode": "integer32",
+                            "minimum": 1,
+                            "relationshipType": "Foreign Key",
+                            "foreignCollection": "e47969d4-5821-11ec-a0ad-b92a626df742",
+                            "foreignField": [
+                                "e47969d4-5821-11ec-a0ad-b92a626df742",
+                                "e47969d7-5821-11ec-a0ad-b92a626df742"
+                            ],
+                            "parentRelationship": "2b1b6590-584b-11ec-bf49-67febb127f1a"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "01793e70-584a-11ec-bf49-67febb127f1a",
+                    "maxItems": 10000,
+                    "uniqueItems": true
+                },
+                {
+                    "name": "sharing",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "document",
+                            "properties": [
+                                {
+                                    "code": "",
+                                    "name": "addedByUserId",
+                                    "isActivated": true,
+                                    "type": "numeric",
+                                    "required": true,
+                                    "mode": "integer32",
+                                    "primaryKey": false,
+                                    "GUID": "8af7e9d0-584a-11ec-bf49-67febb127f1a",
+                                    "relationshipType": "Foreign Key",
+                                    "parentRelationship": "8af810e0-584a-11ec-bf49-67febb127f1a",
+                                    "foreignCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+                                    "foreignField": [
+                                        "e47746f0-5821-11ec-a0ad-b92a626df742",
+                                        "e4776e01-5821-11ec-a0ad-b92a626df742"
+                                    ],
+                                    "hackoladeMeta": {},
+                                    "minimum": 1
+                                },
+                                {
+                                    "code": "",
+                                    "name": "addedCancoId",
+                                    "isActivated": true,
+                                    "type": "numeric",
+                                    "required": true,
+                                    "mode": "integer32",
+                                    "primaryKey": false,
+                                    "GUID": "8af8d430-584a-11ec-bf49-67febb127f1a",
+                                    "hackoladeMeta": {},
+                                    "minimum": 1
+                                },
+                                {
+                                    "code": "",
+                                    "name": "addedDate",
+                                    "isActivated": true,
+                                    "type": "date",
+                                    "primaryKey": false,
+                                    "required": true,
+                                    "default": "",
+                                    "GUID": "8af88610-584a-11ec-bf49-67febb127f1a",
+                                    "error": {
+                                        "name": false,
+                                        "code": false
+                                    },
+                                    "hackoladeMeta": {},
+                                    "foreignCollection": "",
+                                    "foreignField": []
+                                }
+                            ],
+                            "additionalProperties": false,
+                            "GUID": "81c26e30-584a-11ec-bf49-67febb127f1a",
+                            "arrayItem": true,
+                            "arrayParentType": "array"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "272a71c0-584a-11ec-bf49-67febb127f1a",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "e479b7f3-5821-11ec-a0ad-b92a626df742"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [
+                {
+                    "GUID": "e479df04-5821-11ec-a0ad-b92a626df742",
+                    "name": "fk_playlists_actives_usuaris1_idx",
+                    "key": [],
+                    "unique": false
+                }
+            ],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "e479b7f2-5821-11ec-a0ad-b92a626df742",
+            "code": "",
+            "bucketId": "e44cdb90-5821-11ec-a0ad-b92a626df742",
+            "comments": "",
+            "description": "",
+            "hackoladeMeta": {}
+        }
+    ],
+    "buckets": [
+        {
+            "name": "spotify",
+            "type": "bucket",
+            "collectionIds": [
+                "e47746f0-5821-11ec-a0ad-b92a626df742",
+                "e478a684-5821-11ec-a0ad-b92a626df742",
+                "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                "e47942c4-5821-11ec-a0ad-b92a626df742",
+                "e47969d4-5821-11ec-a0ad-b92a626df742",
+                "e479b7f2-5821-11ec-a0ad-b92a626df742"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "GUID": "e44cdb90-5821-11ec-a0ad-b92a626df742"
+        }
+    ],
+    "views": [],
+    "relationships": [
+        {
+            "name": "fk_album_artista1",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                    "e478f4a2-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e47942c4-5821-11ec-a0ad-b92a626df742",
+                    "e47942c9-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "e4771fe9-5821-11ec-a0ad-b92a626df742",
+            "parentCollection": "e478cd9b-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e47942c4-5821-11ec-a0ad-b92a626df742"
+        },
+        {
+            "name": "fk_cancons_album1",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e47942c4-5821-11ec-a0ad-b92a626df742",
+                    "e47942c7-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e47969d4-5821-11ec-a0ad-b92a626df742",
+                    "e47969d9-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "childCardinality": "1..n",
+            "GUID": "e4771fea-5821-11ec-a0ad-b92a626df742",
+            "parentCollection": "e47942c4-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e47969d4-5821-11ec-a0ad-b92a626df742"
+        },
+        {
+            "name": "fk_playlists_actives_usuaris1",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e47746f0-5821-11ec-a0ad-b92a626df742",
+                    "e4776e01-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e479b7f2-5821-11ec-a0ad-b92a626df742",
+                    "e479b7f7-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "e4771feb-5821-11ec-a0ad-b92a626df742",
+            "parentCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e479b7f2-5821-11ec-a0ad-b92a626df742"
+        },
+        {
+            "name": "fk usuaris.userId to suscripcions.userId",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e47746f0-5821-11ec-a0ad-b92a626df742",
+                    "e4776e01-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e478a684-5821-11ec-a0ad-b92a626df742",
+                    "e478a687-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "parentCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e478a684-5821-11ec-a0ad-b92a626df742",
+            "GUID": "ead7a130-582f-11ec-bf49-67febb127f1a"
+        },
+        {
+            "name": "New Relationship",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e47746f0-5821-11ec-a0ad-b92a626df742",
+                    "e4776e01-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e479b7f2-5821-11ec-a0ad-b92a626df742",
+                    "272a71c0-584a-11ec-bf49-67febb127f1a",
+                    "81c26e30-584a-11ec-bf49-67febb127f1a",
+                    "8af7e9d0-584a-11ec-bf49-67febb127f1a"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "8af810e0-584a-11ec-bf49-67febb127f1a",
+            "childCollection": "e479b7f2-5821-11ec-a0ad-b92a626df742",
+            "parentCollection": "e47746f0-5821-11ec-a0ad-b92a626df742"
+        },
+        {
+            "name": "fk cancons.cancoId to usuaris.canconsFavorites.[0]",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e47969d4-5821-11ec-a0ad-b92a626df742",
+                    "e47969d7-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e47746f0-5821-11ec-a0ad-b92a626df742",
+                    "60984870-5830-11ec-bf49-67febb127f1a",
+                    "609eff30-5830-11ec-bf49-67febb127f1a"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "parentCollection": "e47969d4-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+            "GUID": "d8a15a40-584a-11ec-bf49-67febb127f1a"
+        },
+        {
+            "name": "fk cancons.cancoId to playlists.sharing.[0].addedCancoId",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e47969d4-5821-11ec-a0ad-b92a626df742",
+                    "e47969d7-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e479b7f2-5821-11ec-a0ad-b92a626df742",
+                    "272a71c0-584a-11ec-bf49-67febb127f1a",
+                    "81c26e30-584a-11ec-bf49-67febb127f1a",
+                    "8af8d430-584a-11ec-bf49-67febb127f1a"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "parentCollection": "e47969d4-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e479b7f2-5821-11ec-a0ad-b92a626df742",
+            "GUID": "f8a5c380-584a-11ec-bf49-67febb127f1a"
+        },
+        {
+            "name": "fk cancons.cancoId to playlists.cancons.[0]",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e47969d4-5821-11ec-a0ad-b92a626df742",
+                    "e47969d7-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e479b7f2-5821-11ec-a0ad-b92a626df742",
+                    "01793e70-584a-11ec-bf49-67febb127f1a",
+                    "017c99d0-584a-11ec-bf49-67febb127f1a"
+                ]
+            ],
+            "childCardinality": "1..n",
+            "parentCollection": "e47969d4-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e479b7f2-5821-11ec-a0ad-b92a626df742",
+            "GUID": "2b1b6590-584b-11ec-bf49-67febb127f1a"
+        },
+        {
+            "name": "fk album.albumId to usuaris.albumsFavorits.[0]",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e47942c4-5821-11ec-a0ad-b92a626df742",
+                    "e47942c7-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e47746f0-5821-11ec-a0ad-b92a626df742",
+                    "5af2e480-5848-11ec-bf49-67febb127f1a",
+                    "5af8ff00-5848-11ec-bf49-67febb127f1a"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "parentCollection": "e47942c4-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+            "GUID": "5078ac80-584b-11ec-bf49-67febb127f1a"
+        },
+        {
+            "name": "fk artista.artistaId to usuaris.seguinArtistes.[0]",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                    "e478f4a2-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e47746f0-5821-11ec-a0ad-b92a626df742",
+                    "b66896c0-5848-11ec-bf49-67febb127f1a",
+                    "b66f9ba0-5848-11ec-bf49-67febb127f1a"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "parentCollection": "e478cd9b-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+            "GUID": "59c72e60-584b-11ec-bf49-67febb127f1a"
+        },
+        {
+            "name": "fk usuaris.userId to album.favoritDeUsuari.[0]",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e47746f0-5821-11ec-a0ad-b92a626df742",
+                    "e4776e01-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e47942c4-5821-11ec-a0ad-b92a626df742",
+                    "70632c80-5848-11ec-bf49-67febb127f1a",
+                    "7069e340-5848-11ec-bf49-67febb127f1a"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "parentCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e47942c4-5821-11ec-a0ad-b92a626df742",
+            "GUID": "a580dcc0-584b-11ec-bf49-67febb127f1a"
+        },
+        {
+            "name": "fk usuaris.userId to artista.usuarisSeguidors.[0]",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e47746f0-5821-11ec-a0ad-b92a626df742",
+                    "e4776e01-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                    "d61eb8f0-5848-11ec-bf49-67febb127f1a",
+                    "d624d370-5848-11ec-bf49-67febb127f1a"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "parentCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e478cd9b-5821-11ec-a0ad-b92a626df742",
+            "GUID": "042030a0-584c-11ec-bf49-67febb127f1a"
+        },
+        {
+            "name": "fk artista.artistaId to artista.artistesRelacionats.[0]",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                    "e478f4a2-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                    "ec86a760-5848-11ec-bf49-67febb127f1a",
+                    "ec8ce8f0-5848-11ec-bf49-67febb127f1a"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "parentCollection": "e478cd9b-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e478cd9b-5821-11ec-a0ad-b92a626df742",
+            "GUID": "0c1a4610-584c-11ec-bf49-67febb127f1a"
+        },
+        {
+            "name": "fk album.albumId to artista.albums.[0]",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e47942c4-5821-11ec-a0ad-b92a626df742",
+                    "e47942c7-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                    "501fc900-5849-11ec-bf49-67febb127f1a",
+                    "502631a0-5849-11ec-bf49-67febb127f1a"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "parentCollection": "e47942c4-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e478cd9b-5821-11ec-a0ad-b92a626df742",
+            "GUID": "144137e0-584c-11ec-bf49-67febb127f1a"
+        },
+        {
+            "name": "fk usuaris.userId to cancons.favoritaDeUsuari.[0]",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e47746f0-5821-11ec-a0ad-b92a626df742",
+                    "e4776e01-5821-11ec-a0ad-b92a626df742"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e47969d4-5821-11ec-a0ad-b92a626df742",
+                    "240ec4c0-5848-11ec-bf49-67febb127f1a",
+                    "2415f0b0-5848-11ec-bf49-67febb127f1a"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "parentCollection": "e47746f0-5821-11ec-a0ad-b92a626df742",
+            "childCollection": "e47969d4-5821-11ec-a0ad-b92a626df742",
+            "GUID": "30811f10-584c-11ec-bf49-67febb127f1a"
+        }
+    ],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "e44cdb90-5821-11ec-a0ad-b92a626df742": "spotify",
+        "e4776e01-5821-11ec-a0ad-b92a626df742": "userId",
+        "e4776e03-5821-11ec-a0ad-b92a626df742": "email",
+        "e4776e05-5821-11ec-a0ad-b92a626df742": "password",
+        "e4779510-5821-11ec-a0ad-b92a626df742": "username",
+        "e4779512-5821-11ec-a0ad-b92a626df742": "dataNaixament",
+        "e4779514-5821-11ec-a0ad-b92a626df742": "sexe",
+        "e4779516-5821-11ec-a0ad-b92a626df742": "pais",
+        "e4779518-5821-11ec-a0ad-b92a626df742": "codiPostal",
+        "e47746f0-5821-11ec-a0ad-b92a626df742": "usuaris",
+        "e478a687-5821-11ec-a0ad-b92a626df742": "userId",
+        "e478cd92-5821-11ec-a0ad-b92a626df742": "dataInici",
+        "e478cd94-5821-11ec-a0ad-b92a626df742": "dataRenovacio",
+        "e478cd96-5821-11ec-a0ad-b92a626df742": "formaPagament",
+        "e478a684-5821-11ec-a0ad-b92a626df742": "suscripcions",
+        "e478f4a2-5821-11ec-a0ad-b92a626df742": "artistaId",
+        "e478f4a4-5821-11ec-a0ad-b92a626df742": "nom",
+        "e478f4a6-5821-11ec-a0ad-b92a626df742": "imatgeArtista",
+        "e478cd9b-5821-11ec-a0ad-b92a626df742": "artista",
+        "e47942c7-5821-11ec-a0ad-b92a626df742": "albumId",
+        "e47942c9-5821-11ec-a0ad-b92a626df742": "artistaId",
+        "e47942cb-5821-11ec-a0ad-b92a626df742": "titol",
+        "e47942cd-5821-11ec-a0ad-b92a626df742": "anyPublicacio",
+        "e47969d1-5821-11ec-a0ad-b92a626df742": "imatgePortada",
+        "e47942c4-5821-11ec-a0ad-b92a626df742": "album",
+        "e47969d7-5821-11ec-a0ad-b92a626df742": "cancoId",
+        "e47969d9-5821-11ec-a0ad-b92a626df742": "albumId",
+        "e47969db-5821-11ec-a0ad-b92a626df742": "titol",
+        "e47990e1-5821-11ec-a0ad-b92a626df742": "duracioEnMilisegons",
+        "e47990e3-5821-11ec-a0ad-b92a626df742": "vegadesReproduida",
+        "e47969d4-5821-11ec-a0ad-b92a626df742": "cancons",
+        "e479b7f5-5821-11ec-a0ad-b92a626df742": "playlistId",
+        "e479b7f7-5821-11ec-a0ad-b92a626df742": "userId",
+        "e479b7f9-5821-11ec-a0ad-b92a626df742": "titol",
+        "e479df00-5821-11ec-a0ad-b92a626df742": "nombreDeCancons",
+        "e479df02-5821-11ec-a0ad-b92a626df742": "dataCreacio",
+        "e479b7f2-5821-11ec-a0ad-b92a626df742": "playlists",
+        "e4771fe9-5821-11ec-a0ad-b92a626df742": "fk_album_artista1",
+        "e4771fea-5821-11ec-a0ad-b92a626df742": "fk_cancons_album1",
+        "e4771feb-5821-11ec-a0ad-b92a626df742": "fk_playlists_actives_usuaris1",
+        "c2b27d20-582e-11ec-bf49-67febb127f1a": "isPremium",
+        "14034ab0-582f-11ec-bf49-67febb127f1a": "pagaments",
+        "1403bfe0-582f-11ec-bf49-67febb127f1a": "orderId",
+        "1403bfe1-582f-11ec-bf49-67febb127f1a": "dataPagament",
+        "1403bfe2-582f-11ec-bf49-67febb127f1a": "total",
+        "923225f0-582f-11ec-bf49-67febb127f1a": "paypalUsername",
+        "acb960a0-582f-11ec-bf49-67febb127f1a": "creditCard",
+        "bc0b7f20-582f-11ec-bf49-67febb127f1a": "numeroTargeta",
+        "bf00a340-582f-11ec-bf49-67febb127f1a": "caducitat",
+        "c26c56f0-582f-11ec-bf49-67febb127f1a": "cvc",
+        "ead7a130-582f-11ec-bf49-67febb127f1a": "fk usuaris.userId to suscripcions.userId",
+        "60984870-5830-11ec-bf49-67febb127f1a": "canconsFavorites",
+        "240ec4c0-5848-11ec-bf49-67febb127f1a": "favoritaDeUsuari",
+        "5af2e480-5848-11ec-bf49-67febb127f1a": "albumsFavorits",
+        "70632c80-5848-11ec-bf49-67febb127f1a": "favoritDeUsuari",
+        "b66896c0-5848-11ec-bf49-67febb127f1a": "seguinArtistes",
+        "d61eb8f0-5848-11ec-bf49-67febb127f1a": "usuarisSeguidors",
+        "ec86a760-5848-11ec-bf49-67febb127f1a": "artistesRelacionats",
+        "501fc900-5849-11ec-bf49-67febb127f1a": "albums",
+        "ba59d8b0-5849-11ec-bf49-67febb127f1a": "isDeleted",
+        "01793e70-584a-11ec-bf49-67febb127f1a": "cancons",
+        "272a71c0-584a-11ec-bf49-67febb127f1a": "sharing",
+        "8af810e0-584a-11ec-bf49-67febb127f1a": "New Relationship",
+        "8af88610-584a-11ec-bf49-67febb127f1a": "addedDate",
+        "8af8d430-584a-11ec-bf49-67febb127f1a": "addedCancoId",
+        "8af7e9d0-584a-11ec-bf49-67febb127f1a": "addedByUserId",
+        "d8a15a40-584a-11ec-bf49-67febb127f1a": "fk cancons.cancoId to usuaris.canconsFavorites.[0]",
+        "f8a5c380-584a-11ec-bf49-67febb127f1a": "fk cancons.cancoId to playlists.sharing.[0].addedCancoId",
+        "2b1b6590-584b-11ec-bf49-67febb127f1a": "fk cancons.cancoId to playlists.cancons.[0]",
+        "5078ac80-584b-11ec-bf49-67febb127f1a": "fk album.albumId to usuaris.albumsFavorits.[0]",
+        "59c72e60-584b-11ec-bf49-67febb127f1a": "fk artista.artistaId to usuaris.seguinArtistes.[0]",
+        "a580dcc0-584b-11ec-bf49-67febb127f1a": "fk usuaris.userId to album.favoritDeUsuari.[0]",
+        "042030a0-584c-11ec-bf49-67febb127f1a": "fk usuaris.userId to artista.usuarisSeguidors.[0]",
+        "0c1a4610-584c-11ec-bf49-67febb127f1a": "fk artista.artistaId to artista.artistesRelacionats.[0]",
+        "144137e0-584c-11ec-bf49-67febb127f1a": "fk album.albumId to artista.albums.[0]",
+        "30811f10-584c-11ec-bf49-67febb127f1a": "fk usuaris.userId to cancons.favoritaDeUsuari.[0]"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "d6604080-5821-11ec-a0ad-b92a626df742"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "d6604082-5821-11ec-a0ad-b92a626df742"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "d6604081-5821-11ec-a0ad-b92a626df742"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "v4.4",
+    "dbVendor": "MongoDB",
+    "appTarget": "MONGODB",
+    "creationTS": "2021-12-08T12:24:49.543Z",
+    "GUID": "d6601970-5821-11ec-a0ad-b92a626df742",
+    "isLineageEnabled": false,
+    "code": "",
+    "lastModifTS": "2021-12-08T20:47:54.700Z",
+    "persistenceSchemaVersion": "5",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "5.3.0"
+    },
+    "hackoladeMeta": {},
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "e47746f0-5821-11ec-a0ad-b92a626df742",
+                        "x": 777,
+                        "y": 492,
+                        "width": 254,
+                        "height": 303,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "e478a684-5821-11ec-a0ad-b92a626df742",
+                        "x": 133,
+                        "y": 760,
+                        "width": 295,
+                        "height": 267,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "e478cd9b-5821-11ec-a0ad-b92a626df742",
+                        "x": 160,
+                        "y": 198,
+                        "width": 263,
+                        "height": 195,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "e47942c4-5821-11ec-a0ad-b92a626df742",
+                        "x": 769,
+                        "y": 235,
+                        "width": 246,
+                        "height": 159,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "e47969d4-5821-11ec-a0ad-b92a626df742",
+                        "x": 115,
+                        "y": 417,
+                        "width": 273,
+                        "height": 159,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "e479b7f2-5821-11ec-a0ad-b92a626df742",
+                        "x": 703,
+                        "y": 844,
+                        "width": 283,
+                        "height": 267,
+                        "color": {}
+                    }
+                ],
+                "buckets": [
+                    {
+                        "x": 75,
+                        "y": 158,
+                        "GUID": "e44cdb90-5821-11ec-a0ad-b92a626df742"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": []
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}

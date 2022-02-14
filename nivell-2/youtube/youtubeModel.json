@@ -1,0 +1,1280 @@
+{
+    "modelName": "youtube_create_db",
+    "collections": [
+        {
+            "collectionName": "usuaris",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "",
+                    "name": "userId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": true,
+                    "GUID": "c0573bf1-5816-11ec-a288-1bf4eff58426",
+                    "childRelationships": [
+                        "c056edd0-5816-11ec-a288-1bf4eff58426",
+                        "c056edd1-5816-11ec-a288-1bf4eff58426",
+                        "c056edd2-5816-11ec-a288-1bf4eff58426",
+                        "c056edd6-5816-11ec-a288-1bf4eff58426",
+                        "06f3a752-581d-11ec-a288-1bf4eff58426",
+                        "7b29b6f2-581d-11ec-a288-1bf4eff58426"
+                    ],
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "email",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c0576301-5816-11ec-a288-1bf4eff58426",
+                    "pattern": "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"
+                },
+                {
+                    "code": "",
+                    "name": "password",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c0576303-5816-11ec-a288-1bf4eff58426"
+                },
+                {
+                    "code": "",
+                    "name": "username",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c0576305-5816-11ec-a288-1bf4eff58426"
+                },
+                {
+                    "code": "",
+                    "name": "dataNaixament",
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "required": true,
+                    "default": "",
+                    "GUID": "c0576307-5816-11ec-a288-1bf4eff58426",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "sexe",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "primaryKey": false,
+                    "GUID": "c0576309-5816-11ec-a288-1bf4eff58426",
+                    "error": {
+                        "enum": false,
+                        "enums": [
+                            false,
+                            false
+                        ],
+                        "exampleItems": [
+                            false,
+                            false
+                        ]
+                    },
+                    "enum": [
+                        "Masculí",
+                        "Femení"
+                    ]
+                },
+                {
+                    "code": "",
+                    "name": "pais",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c057b121-5816-11ec-a288-1bf4eff58426"
+                },
+                {
+                    "code": "",
+                    "name": "codiPostal",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": false,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c057b123-5816-11ec-a288-1bf4eff58426"
+                },
+                {
+                    "name": "subscritCanalId",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "0fe72d60-581c-11ec-a288-1bf4eff58426",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "mode": "integer32",
+                            "minimum": 1
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "0fe0c4c0-581c-11ec-a288-1bf4eff58426",
+                    "uniqueItems": true
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "c05714e2-5816-11ec-a288-1bf4eff58426"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "c05714e1-5816-11ec-a288-1bf4eff58426",
+            "code": "",
+            "bucketId": "c033fc80-5816-11ec-a288-1bf4eff58426",
+            "comments": "",
+            "description": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        },
+        {
+            "collectionName": "videos",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "",
+                    "name": "videoId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": true,
+                    "GUID": "c057d832-5816-11ec-a288-1bf4eff58426",
+                    "childRelationships": [
+                        "c056edd3-5816-11ec-a288-1bf4eff58426"
+                    ],
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "publicatPerUserId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "c057d834-5816-11ec-a288-1bf4eff58426",
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "c056edd0-5816-11ec-a288-1bf4eff58426",
+                    "foreignCollection": "c05714e1-5816-11ec-a288-1bf4eff58426",
+                    "foreignField": [
+                        "c05714e1-5816-11ec-a288-1bf4eff58426",
+                        "c0573bf1-5816-11ec-a288-1bf4eff58426"
+                    ],
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "titol",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c057ff41-5816-11ec-a288-1bf4eff58426"
+                },
+                {
+                    "code": "",
+                    "name": "descripcio",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c057ff43-5816-11ec-a288-1bf4eff58426",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "grandaria",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c057ff45-5816-11ec-a288-1bf4eff58426"
+                },
+                {
+                    "code": "",
+                    "name": "nomArxiu",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c057ff47-5816-11ec-a288-1bf4eff58426"
+                },
+                {
+                    "code": "",
+                    "name": "duracioMilisegons",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "c057ff49-5816-11ec-a288-1bf4eff58426",
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "thumbnail",
+                    "isActivated": true,
+                    "type": "binary",
+                    "primaryKey": false,
+                    "required": true,
+                    "GUID": "c057ff4b-5816-11ec-a288-1bf4eff58426",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "dataHoraPublicacio",
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "required": true,
+                    "default": "",
+                    "GUID": "c057ff4d-5816-11ec-a288-1bf4eff58426",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "visibilitat",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "primaryKey": false,
+                    "GUID": "c0582651-5816-11ec-a288-1bf4eff58426",
+                    "error": {
+                        "enum": false,
+                        "enums": [
+                            false,
+                            false,
+                            false
+                        ],
+                        "exampleItems": [
+                            false,
+                            false,
+                            false
+                        ]
+                    },
+                    "enum": [
+                        "Públic",
+                        "Ocult",
+                        "Privat"
+                    ]
+                },
+                {
+                    "code": "",
+                    "name": "nombreReproduccions",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": false,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "c0582653-5816-11ec-a288-1bf4eff58426",
+                    "minimum": 0
+                },
+                {
+                    "code": "",
+                    "name": "likes",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": false,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "c0582655-5816-11ec-a288-1bf4eff58426",
+                    "minimum": 0
+                },
+                {
+                    "code": "",
+                    "name": "dislikes",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": false,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "c0582657-5816-11ec-a288-1bf4eff58426",
+                    "minimum": 0
+                },
+                {
+                    "name": "etiquetes",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "GUID": "7cea1680-581b-11ec-a288-1bf4eff58426",
+                            "arrayItem": true,
+                            "arrayParentType": "array"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "7ce3d4f0-581b-11ec-a288-1bf4eff58426",
+                    "uniqueItems": true
+                },
+                {
+                    "name": "likesAndDislikes",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "document",
+                            "properties": [
+                                {
+                                    "code": "",
+                                    "isActivated": true,
+                                    "type": "numeric",
+                                    "required": true,
+                                    "mode": "integer32",
+                                    "primaryKey": false,
+                                    "GUID": "7b29b6f0-581d-11ec-a288-1bf4eff58426",
+                                    "relationshipType": "Foreign Key",
+                                    "parentRelationship": "7b29b6f2-581d-11ec-a288-1bf4eff58426",
+                                    "foreignCollection": "c05714e1-5816-11ec-a288-1bf4eff58426",
+                                    "foreignField": [
+                                        "c05714e1-5816-11ec-a288-1bf4eff58426",
+                                        "c0573bf1-5816-11ec-a288-1bf4eff58426"
+                                    ],
+                                    "hackoladeMeta": {},
+                                    "name": "userId",
+                                    "minimum": 1,
+                                    "error": {}
+                                },
+                                {
+                                    "code": "",
+                                    "isActivated": true,
+                                    "type": "string",
+                                    "required": true,
+                                    "primaryKey": false,
+                                    "GUID": "751acfb0-581d-11ec-a288-1bf4eff58426",
+                                    "error": {
+                                        "enum": false,
+                                        "enums": [
+                                            false,
+                                            false
+                                        ],
+                                        "exampleItems": [
+                                            false,
+                                            false
+                                        ]
+                                    },
+                                    "hackoladeMeta": {},
+                                    "name": "likeOrDislike",
+                                    "enum": [
+                                        "like",
+                                        "dislike"
+                                    ]
+                                },
+                                {
+                                    "code": "",
+                                    "isActivated": true,
+                                    "type": "date",
+                                    "primaryKey": false,
+                                    "required": true,
+                                    "default": "",
+                                    "GUID": "789e7830-581d-11ec-a288-1bf4eff58426",
+                                    "error": {},
+                                    "hackoladeMeta": {},
+                                    "name": "dataHora",
+                                    "foreignCollection": "",
+                                    "foreignField": []
+                                }
+                            ],
+                            "additionalProperties": false,
+                            "GUID": "6ed0b430-581d-11ec-a288-1bf4eff58426",
+                            "arrayItem": true,
+                            "arrayParentType": "array"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "6ec828b0-581d-11ec-a288-1bf4eff58426",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "c057d830-5816-11ec-a288-1bf4eff58426"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [
+                {
+                    "GUID": "c0582659-5816-11ec-a288-1bf4eff58426",
+                    "name": "fk_videos_usuaris1_idx",
+                    "key": [],
+                    "unique": false
+                }
+            ],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "c057b124-5816-11ec-a288-1bf4eff58426",
+            "code": "",
+            "bucketId": "c033fc80-5816-11ec-a288-1bf4eff58426",
+            "comments": "",
+            "description": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        },
+        {
+            "collectionName": "canal",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "",
+                    "name": "canalId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": true,
+                    "GUID": "c0584d63-5816-11ec-a288-1bf4eff58426",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "userId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "c0584d65-5816-11ec-a288-1bf4eff58426",
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "c056edd1-5816-11ec-a288-1bf4eff58426",
+                    "foreignCollection": "c05714e1-5816-11ec-a288-1bf4eff58426",
+                    "foreignField": [
+                        "c05714e1-5816-11ec-a288-1bf4eff58426",
+                        "c0573bf1-5816-11ec-a288-1bf4eff58426"
+                    ],
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "nom",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c0584d67-5816-11ec-a288-1bf4eff58426"
+                },
+                {
+                    "code": "",
+                    "name": "descripcio",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 500,
+                    "primaryKey": false,
+                    "GUID": "c0587470-5816-11ec-a288-1bf4eff58426",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "dataCreacio",
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "required": true,
+                    "default": "",
+                    "GUID": "c0587472-5816-11ec-a288-1bf4eff58426",
+                    "error": {}
+                },
+                {
+                    "name": "usuarisSubscrits",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "28bc7250-581c-11ec-a288-1bf4eff58426",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "minimum": 1,
+                            "mode": "integer32"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "28b67ee0-581c-11ec-a288-1bf4eff58426",
+                    "uniqueItems": true
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "c0584d61-5816-11ec-a288-1bf4eff58426"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [
+                {
+                    "GUID": "c0587475-5816-11ec-a288-1bf4eff58426",
+                    "name": "fk_canal_usuaris1_idx",
+                    "key": [],
+                    "unique": false
+                },
+                {
+                    "GUID": "c0587476-5816-11ec-a288-1bf4eff58426",
+                    "name": "usuari_id_UNIQUE",
+                    "key": [],
+                    "unique": false
+                }
+            ],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "c0584d60-5816-11ec-a288-1bf4eff58426",
+            "code": "",
+            "bucketId": "c033fc80-5816-11ec-a288-1bf4eff58426",
+            "comments": "",
+            "description": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        },
+        {
+            "collectionName": "comentaris",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "",
+                    "name": "commentId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": true,
+                    "GUID": "c0589b82-5816-11ec-a288-1bf4eff58426",
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "videoId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "c0589b84-5816-11ec-a288-1bf4eff58426",
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "c056edd3-5816-11ec-a288-1bf4eff58426",
+                    "foreignCollection": "c057b124-5816-11ec-a288-1bf4eff58426",
+                    "foreignField": [
+                        "c057b124-5816-11ec-a288-1bf4eff58426",
+                        "c057d832-5816-11ec-a288-1bf4eff58426"
+                    ],
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "userId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "c0589b86-5816-11ec-a288-1bf4eff58426",
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "c056edd2-5816-11ec-a288-1bf4eff58426",
+                    "foreignCollection": "c05714e1-5816-11ec-a288-1bf4eff58426",
+                    "foreignField": [
+                        "c05714e1-5816-11ec-a288-1bf4eff58426",
+                        "c0573bf1-5816-11ec-a288-1bf4eff58426"
+                    ],
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "textComentari",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 500,
+                    "primaryKey": false,
+                    "GUID": "c0589b88-5816-11ec-a288-1bf4eff58426",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "dataHora",
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "required": true,
+                    "default": "",
+                    "GUID": "c0589b8a-5816-11ec-a288-1bf4eff58426",
+                    "error": {}
+                },
+                {
+                    "name": "likesAndDislikes",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "document",
+                            "properties": [
+                                {
+                                    "code": "",
+                                    "name": "userId",
+                                    "isActivated": true,
+                                    "type": "numeric",
+                                    "required": true,
+                                    "mode": "integer32",
+                                    "primaryKey": false,
+                                    "GUID": "06f3a750-581d-11ec-a288-1bf4eff58426",
+                                    "relationshipType": "Foreign Key",
+                                    "parentRelationship": "06f3a752-581d-11ec-a288-1bf4eff58426",
+                                    "foreignCollection": "c05714e1-5816-11ec-a288-1bf4eff58426",
+                                    "foreignField": [
+                                        "c05714e1-5816-11ec-a288-1bf4eff58426",
+                                        "c0573bf1-5816-11ec-a288-1bf4eff58426"
+                                    ],
+                                    "hackoladeMeta": {},
+                                    "minimum": 1
+                                },
+                                {
+                                    "code": "",
+                                    "name": "likeOrDislike",
+                                    "isActivated": true,
+                                    "type": "string",
+                                    "required": true,
+                                    "primaryKey": false,
+                                    "GUID": "03591b70-581d-11ec-a288-1bf4eff58426",
+                                    "error": {
+                                        "enum": false,
+                                        "enums": [
+                                            false,
+                                            false
+                                        ],
+                                        "exampleItems": [
+                                            false,
+                                            false
+                                        ]
+                                    },
+                                    "hackoladeMeta": {},
+                                    "foreignCollection": "",
+                                    "foreignField": [],
+                                    "enum": [
+                                        "like",
+                                        "dislike"
+                                    ]
+                                },
+                                {
+                                    "code": "",
+                                    "name": "dataHora",
+                                    "isActivated": true,
+                                    "type": "date",
+                                    "primaryKey": false,
+                                    "required": true,
+                                    "default": "",
+                                    "GUID": "057592d0-581d-11ec-a288-1bf4eff58426",
+                                    "error": {
+                                        "name": false,
+                                        "code": false
+                                    },
+                                    "hackoladeMeta": {},
+                                    "foreignCollection": "",
+                                    "foreignField": []
+                                }
+                            ],
+                            "additionalProperties": false,
+                            "GUID": "1979c7b0-581d-11ec-a288-1bf4eff58426",
+                            "arrayItem": true,
+                            "arrayParentType": "array"
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "0ce19910-581d-11ec-a288-1bf4eff58426",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "c0589b80-5816-11ec-a288-1bf4eff58426"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [
+                {
+                    "GUID": "c0589b8d-5816-11ec-a288-1bf4eff58426",
+                    "name": "fk_comentaris_usuaris1_idx",
+                    "key": [],
+                    "unique": false
+                },
+                {
+                    "GUID": "c0589b8e-5816-11ec-a288-1bf4eff58426",
+                    "name": "fk_comentaris_videos1_idx",
+                    "key": [],
+                    "unique": false
+                }
+            ],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "c058747d-5816-11ec-a288-1bf4eff58426",
+            "code": "",
+            "bucketId": "c033fc80-5816-11ec-a288-1bf4eff58426",
+            "comments": "",
+            "description": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        },
+        {
+            "collectionName": "playlists",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "",
+                    "name": "playlistId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": true,
+                    "GUID": "c058c29c-5816-11ec-a288-1bf4eff58426",
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "userId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "required": true,
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "c058c29e-5816-11ec-a288-1bf4eff58426",
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "c056edd6-5816-11ec-a288-1bf4eff58426",
+                    "foreignCollection": "c05714e1-5816-11ec-a288-1bf4eff58426",
+                    "foreignField": [
+                        "c05714e1-5816-11ec-a288-1bf4eff58426",
+                        "c0573bf1-5816-11ec-a288-1bf4eff58426"
+                    ],
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "nom",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c058e9a1-5816-11ec-a288-1bf4eff58426"
+                },
+                {
+                    "code": "",
+                    "name": "data_creacio",
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "required": true,
+                    "default": "",
+                    "GUID": "c058e9a3-5816-11ec-a288-1bf4eff58426",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "estat",
+                    "isActivated": true,
+                    "type": "string",
+                    "required": true,
+                    "primaryKey": false,
+                    "GUID": "c058e9a5-5816-11ec-a288-1bf4eff58426",
+                    "error": {
+                        "enum": false,
+                        "enums": [
+                            false,
+                            false
+                        ],
+                        "exampleItems": [
+                            false,
+                            false
+                        ]
+                    },
+                    "enum": [
+                        "pública",
+                        "privada"
+                    ]
+                },
+                {
+                    "name": "videosInPlaylist",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "ad519910-581b-11ec-a288-1bf4eff58426",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "mode": "integer32",
+                            "minimum": 1
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "ad4abb40-581b-11ec-a288-1bf4eff58426",
+                    "uniqueItems": true
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "c058c29a-5816-11ec-a288-1bf4eff58426"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [
+                {
+                    "GUID": "c058e9a7-5816-11ec-a288-1bf4eff58426",
+                    "name": "fk_playlists_usuaris1_idx",
+                    "key": [],
+                    "unique": false
+                }
+            ],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "c058c299-5816-11ec-a288-1bf4eff58426",
+            "code": "",
+            "bucketId": "c033fc80-5816-11ec-a288-1bf4eff58426",
+            "comments": "",
+            "description": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        }
+    ],
+    "buckets": [
+        {
+            "name": "youtube",
+            "type": "bucket",
+            "collectionIds": [
+                "c05714e1-5816-11ec-a288-1bf4eff58426",
+                "c057b124-5816-11ec-a288-1bf4eff58426",
+                "c0584d60-5816-11ec-a288-1bf4eff58426",
+                "c058747d-5816-11ec-a288-1bf4eff58426",
+                "c058c299-5816-11ec-a288-1bf4eff58426"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "GUID": "c033fc80-5816-11ec-a288-1bf4eff58426"
+        }
+    ],
+    "views": [],
+    "relationships": [
+        {
+            "name": "fk_videos_usuaris1",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "c05714e1-5816-11ec-a288-1bf4eff58426",
+                    "c0573bf1-5816-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "c057b124-5816-11ec-a288-1bf4eff58426",
+                    "c057d834-5816-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "c056edd0-5816-11ec-a288-1bf4eff58426",
+            "parentCollection": "c05714e1-5816-11ec-a288-1bf4eff58426",
+            "childCollection": "c057b124-5816-11ec-a288-1bf4eff58426"
+        },
+        {
+            "name": "fk_canal_usuaris1",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "c05714e1-5816-11ec-a288-1bf4eff58426",
+                    "c0573bf1-5816-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "c0584d60-5816-11ec-a288-1bf4eff58426",
+                    "c0584d65-5816-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "childCardinality": "1",
+            "GUID": "c056edd1-5816-11ec-a288-1bf4eff58426",
+            "parentCollection": "c05714e1-5816-11ec-a288-1bf4eff58426",
+            "childCollection": "c0584d60-5816-11ec-a288-1bf4eff58426"
+        },
+        {
+            "name": "fk_comentaris_usuaris1",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "c05714e1-5816-11ec-a288-1bf4eff58426",
+                    "c0573bf1-5816-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "c058747d-5816-11ec-a288-1bf4eff58426",
+                    "c0589b86-5816-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "c056edd2-5816-11ec-a288-1bf4eff58426",
+            "parentCollection": "c05714e1-5816-11ec-a288-1bf4eff58426",
+            "childCollection": "c058747d-5816-11ec-a288-1bf4eff58426"
+        },
+        {
+            "name": "fk_comentaris_videos1",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "c057b124-5816-11ec-a288-1bf4eff58426",
+                    "c057d832-5816-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "c058747d-5816-11ec-a288-1bf4eff58426",
+                    "c0589b84-5816-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "c056edd3-5816-11ec-a288-1bf4eff58426",
+            "parentCollection": "c057b124-5816-11ec-a288-1bf4eff58426",
+            "childCollection": "c058747d-5816-11ec-a288-1bf4eff58426"
+        },
+        {
+            "name": "fk_playlists_usuaris1",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "c05714e1-5816-11ec-a288-1bf4eff58426",
+                    "c0573bf1-5816-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "c058c299-5816-11ec-a288-1bf4eff58426",
+                    "c058c29e-5816-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "c056edd6-5816-11ec-a288-1bf4eff58426",
+            "parentCollection": "c05714e1-5816-11ec-a288-1bf4eff58426",
+            "childCollection": "c058c299-5816-11ec-a288-1bf4eff58426"
+        },
+        {
+            "name": "New Relationship",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "c05714e1-5816-11ec-a288-1bf4eff58426",
+                    "c0573bf1-5816-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "c058747d-5816-11ec-a288-1bf4eff58426",
+                    "0ce19910-581d-11ec-a288-1bf4eff58426",
+                    "1979c7b0-581d-11ec-a288-1bf4eff58426",
+                    "06f3a750-581d-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "06f3a752-581d-11ec-a288-1bf4eff58426",
+            "childCollection": "c058747d-5816-11ec-a288-1bf4eff58426",
+            "parentCollection": "c05714e1-5816-11ec-a288-1bf4eff58426"
+        },
+        {
+            "name": "New Relationship(2)",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "c05714e1-5816-11ec-a288-1bf4eff58426",
+                    "c0573bf1-5816-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "c057b124-5816-11ec-a288-1bf4eff58426",
+                    "6ec828b0-581d-11ec-a288-1bf4eff58426",
+                    "6ed0b430-581d-11ec-a288-1bf4eff58426",
+                    "7b29b6f0-581d-11ec-a288-1bf4eff58426"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "7b29b6f2-581d-11ec-a288-1bf4eff58426",
+            "childCollection": "c057b124-5816-11ec-a288-1bf4eff58426",
+            "parentCollection": "c05714e1-5816-11ec-a288-1bf4eff58426"
+        }
+    ],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "c033fc80-5816-11ec-a288-1bf4eff58426": "youtube",
+        "c0573bf1-5816-11ec-a288-1bf4eff58426": "userId",
+        "c0576301-5816-11ec-a288-1bf4eff58426": "email",
+        "c0576303-5816-11ec-a288-1bf4eff58426": "password",
+        "c0576305-5816-11ec-a288-1bf4eff58426": "username",
+        "c0576307-5816-11ec-a288-1bf4eff58426": "dataNaixament",
+        "c0576309-5816-11ec-a288-1bf4eff58426": "sexe",
+        "c057b121-5816-11ec-a288-1bf4eff58426": "pais",
+        "c057b123-5816-11ec-a288-1bf4eff58426": "codiPostal",
+        "c05714e1-5816-11ec-a288-1bf4eff58426": "usuaris",
+        "c057d832-5816-11ec-a288-1bf4eff58426": "videoId",
+        "c057d834-5816-11ec-a288-1bf4eff58426": "publicatPerUserId",
+        "c057ff41-5816-11ec-a288-1bf4eff58426": "titol",
+        "c057ff43-5816-11ec-a288-1bf4eff58426": "descripcio",
+        "c057ff45-5816-11ec-a288-1bf4eff58426": "grandaria",
+        "c057ff47-5816-11ec-a288-1bf4eff58426": "nomArxiu",
+        "c057ff49-5816-11ec-a288-1bf4eff58426": "duracioMilisegons",
+        "c057ff4b-5816-11ec-a288-1bf4eff58426": "thumbnail",
+        "c057ff4d-5816-11ec-a288-1bf4eff58426": "dataHoraPublicacio",
+        "c0582651-5816-11ec-a288-1bf4eff58426": "visibilitat",
+        "c0582653-5816-11ec-a288-1bf4eff58426": "nombreReproduccions",
+        "c0582655-5816-11ec-a288-1bf4eff58426": "likes",
+        "c0582657-5816-11ec-a288-1bf4eff58426": "dislikes",
+        "c057b124-5816-11ec-a288-1bf4eff58426": "videos",
+        "c0584d63-5816-11ec-a288-1bf4eff58426": "canalId",
+        "c0584d65-5816-11ec-a288-1bf4eff58426": "userId",
+        "c0584d67-5816-11ec-a288-1bf4eff58426": "nom",
+        "c0587470-5816-11ec-a288-1bf4eff58426": "descripcio",
+        "c0587472-5816-11ec-a288-1bf4eff58426": "dataCreacio",
+        "c0584d60-5816-11ec-a288-1bf4eff58426": "canal",
+        "c0589b82-5816-11ec-a288-1bf4eff58426": "commentId",
+        "c0589b84-5816-11ec-a288-1bf4eff58426": "videoId",
+        "c0589b86-5816-11ec-a288-1bf4eff58426": "userId",
+        "c0589b88-5816-11ec-a288-1bf4eff58426": "textComentari",
+        "c0589b8a-5816-11ec-a288-1bf4eff58426": "dataHora",
+        "c058747d-5816-11ec-a288-1bf4eff58426": "comentaris",
+        "c058c29c-5816-11ec-a288-1bf4eff58426": "playlistId",
+        "c058c29e-5816-11ec-a288-1bf4eff58426": "userId",
+        "c058e9a1-5816-11ec-a288-1bf4eff58426": "nom",
+        "c058e9a3-5816-11ec-a288-1bf4eff58426": "data_creacio",
+        "c058e9a5-5816-11ec-a288-1bf4eff58426": "estat",
+        "c058c299-5816-11ec-a288-1bf4eff58426": "playlists",
+        "c056edd0-5816-11ec-a288-1bf4eff58426": "fk_videos_usuaris1",
+        "c056edd1-5816-11ec-a288-1bf4eff58426": "fk_canal_usuaris1",
+        "c056edd2-5816-11ec-a288-1bf4eff58426": "fk_comentaris_usuaris1",
+        "c056edd3-5816-11ec-a288-1bf4eff58426": "fk_comentaris_videos1",
+        "c056edd6-5816-11ec-a288-1bf4eff58426": "fk_playlists_usuaris1",
+        "7ce3d4f0-581b-11ec-a288-1bf4eff58426": "etiquetes",
+        "ad4abb40-581b-11ec-a288-1bf4eff58426": "videosInPlaylist",
+        "0fe0c4c0-581c-11ec-a288-1bf4eff58426": "subscritCanalId",
+        "28b67ee0-581c-11ec-a288-1bf4eff58426": "usuarisSubscrits",
+        "06f3a752-581d-11ec-a288-1bf4eff58426": "New Relationship",
+        "0ce19910-581d-11ec-a288-1bf4eff58426": "likesAndDislikes",
+        "06f3a750-581d-11ec-a288-1bf4eff58426": "userId",
+        "03591b70-581d-11ec-a288-1bf4eff58426": "likeOrDislike",
+        "057592d0-581d-11ec-a288-1bf4eff58426": "dataHora",
+        "6ec828b0-581d-11ec-a288-1bf4eff58426": "likesAndDislikes",
+        "7b29b6f2-581d-11ec-a288-1bf4eff58426": "New Relationship(2)",
+        "7b29b6f0-581d-11ec-a288-1bf4eff58426": "userId",
+        "751acfb0-581d-11ec-a288-1bf4eff58426": "likeOrDislike",
+        "789e7830-581d-11ec-a288-1bf4eff58426": "dataHora"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "928d6eb1-5816-11ec-a288-1bf4eff58426"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "928d6eb3-5816-11ec-a288-1bf4eff58426"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "928d6eb2-5816-11ec-a288-1bf4eff58426"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "v4.4",
+    "dbVendor": "MongoDB",
+    "appTarget": "MONGODB",
+    "creationTS": "2021-12-08T11:04:11.291Z",
+    "GUID": "928d6eb0-5816-11ec-a288-1bf4eff58426",
+    "isLineageEnabled": false,
+    "code": "",
+    "lastModifTS": "2021-12-08T20:39:25.087Z",
+    "persistenceSchemaVersion": "5",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "5.3.0"
+    },
+    "hackoladeMeta": {},
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "c05714e1-5816-11ec-a288-1bf4eff58426",
+                        "x": 113.18029115341547,
+                        "y": 408.1746920492719,
+                        "width": 244,
+                        "height": 213,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "c057b124-5816-11ec-a288-1bf4eff58426",
+                        "x": 751.1870100783876,
+                        "y": 148.0851063829786,
+                        "width": 285,
+                        "height": 393,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "c0584d60-5816-11ec-a288-1bf4eff58426",
+                        "x": 541.5789473684212,
+                        "y": 788.902575587906,
+                        "width": 248,
+                        "height": 159,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "c058747d-5816-11ec-a288-1bf4eff58426",
+                        "x": 172.09406494960805,
+                        "y": 107.55879059350504,
+                        "width": 266,
+                        "height": 213,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "c058c299-5816-11ec-a288-1bf4eff58426",
+                        "x": 863.527435610302,
+                        "y": 590.2687569988805,
+                        "width": 242,
+                        "height": 159,
+                        "color": {}
+                    }
+                ],
+                "buckets": [
+                    {
+                        "x": 73.18029115341547,
+                        "y": 67.55879059350504,
+                        "GUID": "c033fc80-5816-11ec-a288-1bf4eff58426"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": []
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}

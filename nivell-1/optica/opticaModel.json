@@ -1,0 +1,827 @@
+{
+    "modelName": "New Model",
+    "collections": [
+        {
+            "collectionName": "clients",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "",
+                    "name": "clientId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "mode": "integer32",
+                    "primaryKey": false,
+                    "GUID": "c2a7f501-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "childRelationships": [
+                        "b0e71490-575a-11ec-af96-c16fb1f8afb3",
+                        "b2d995c0-575a-11ec-af96-c16fb1f8afb3"
+                    ],
+                    "minimum": 1
+                },
+                {
+                    "code": "",
+                    "name": "nom",
+                    "isActivated": true,
+                    "type": "string",
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c2a81c16-55ed-11ec-9353-090e17d88b3d",
+                    "required": true
+                },
+                {
+                    "code": "",
+                    "name": "primerCognom",
+                    "isActivated": true,
+                    "type": "string",
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c2a81c17-55ed-11ec-9353-090e17d88b3d",
+                    "required": true
+                },
+                {
+                    "code": "",
+                    "name": "segonCognom",
+                    "isActivated": true,
+                    "type": "string",
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c2a81c18-55ed-11ec-9353-090e17d88b3d",
+                    "required": true
+                },
+                {
+                    "code": "",
+                    "name": "telefon",
+                    "isActivated": true,
+                    "type": "string",
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c2a81c19-55ed-11ec-9353-090e17d88b3d",
+                    "required": true
+                },
+                {
+                    "code": "",
+                    "name": "correu",
+                    "isActivated": true,
+                    "type": "string",
+                    "maxLength": 50,
+                    "primaryKey": false,
+                    "GUID": "c2a81c14-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "pattern": "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"
+                },
+                {
+                    "code": "",
+                    "name": "dataRegistre",
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "GUID": "c2a81c15-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "clientsAdreca",
+                    "isActivated": true,
+                    "type": "document",
+                    "properties": [
+                        {
+                            "code": "",
+                            "name": "carrer",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 50,
+                            "primaryKey": false,
+                            "GUID": "c2a7f503-55ed-11ec-9353-090e17d88b3d",
+                            "required": true
+                        },
+                        {
+                            "code": "",
+                            "name": "numero",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 10,
+                            "primaryKey": false,
+                            "GUID": "c2a81c10-55ed-11ec-9353-090e17d88b3d",
+                            "required": true
+                        },
+                        {
+                            "code": "",
+                            "name": "pis",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 10,
+                            "primaryKey": false,
+                            "GUID": "c2a81c12-55ed-11ec-9353-090e17d88b3d",
+                            "required": true
+                        },
+                        {
+                            "code": "",
+                            "name": "porta",
+                            "isActivated": true,
+                            "type": "string",
+                            "primaryKey": false,
+                            "GUID": "c2a81c13-55ed-11ec-9353-090e17d88b3d",
+                            "required": true,
+                            "maxLength": 10
+                        },
+                        {
+                            "code": "",
+                            "name": "ciutat",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 20,
+                            "primaryKey": false,
+                            "GUID": "c2a7f504-55ed-11ec-9353-090e17d88b3d",
+                            "required": true
+                        },
+                        {
+                            "code": "",
+                            "name": "codiPostal",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 8,
+                            "primaryKey": false,
+                            "GUID": "c2a7f505-55ed-11ec-9353-090e17d88b3d",
+                            "required": true
+                        },
+                        {
+                            "code": "",
+                            "name": "pais",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 50,
+                            "primaryKey": false,
+                            "GUID": "c2a81c11-55ed-11ec-9353-090e17d88b3d",
+                            "required": true
+                        }
+                    ],
+                    "additionalProperties": false,
+                    "primaryKey": false,
+                    "GUID": "c2a7f502-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "recomenatPerClientId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "mode": "integer32",
+                    "GUID": "c2a81c22-55ed-11ec-9353-090e17d88b3d",
+                    "required": false,
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "c2bb7d00-55ed-11ec-9353-090e17d88b3d",
+                    "foreignField": [
+                        "c2bb7d00-55ed-11ec-9353-090e17d88b3d",
+                        "c2a7f501-55ed-11ec-9353-090e17d88b3d"
+                    ],
+                    "parentRelationship": "b2d995c0-575a-11ec-af96-c16fb1f8afb3",
+                    "minimum": 1
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "GUID": "c2bba410-55ed-11ec-9353-090e17d88b3d",
+                "properties": []
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [
+                {
+                    "key": [],
+                    "name": "_id_",
+                    "GUID": "c2c6a090-55ed-11ec-9353-090e17d88b3d"
+                }
+            ],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "c2bb7d00-55ed-11ec-9353-090e17d88b3d",
+            "bucketId": "c2c80020-55ed-11ec-9353-090e17d88b3d",
+            "code": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        },
+        {
+            "collectionName": "proveidors",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "",
+                    "name": "proveidorId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "mode": "integer32",
+                    "GUID": "c2a84321-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "childRelationships": [
+                        "0750ed20-575a-11ec-bb0d-cd02d2e748bc"
+                    ],
+                    "minimum": 1,
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "nom",
+                    "isActivated": true,
+                    "type": "string",
+                    "maxLength": 50,
+                    "GUID": "c2a84322-55ed-11ec-9353-090e17d88b3d",
+                    "required": true
+                },
+                {
+                    "code": "",
+                    "name": "telefon",
+                    "isActivated": true,
+                    "type": "string",
+                    "maxLength": 15,
+                    "GUID": "c2a84323-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "fax",
+                    "isActivated": true,
+                    "type": "string",
+                    "maxLength": 15,
+                    "GUID": "c2a84324-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "nif",
+                    "isActivated": true,
+                    "type": "string",
+                    "maxLength": 11,
+                    "GUID": "c2a84325-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "proveidorsAdreca",
+                    "isActivated": true,
+                    "type": "document",
+                    "properties": [
+                        {
+                            "code": "",
+                            "name": "carrer",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 50,
+                            "GUID": "c2a84327-55ed-11ec-9353-090e17d88b3d",
+                            "required": true
+                        },
+                        {
+                            "code": "",
+                            "name": "numero",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 10,
+                            "GUID": "c2a84328-55ed-11ec-9353-090e17d88b3d",
+                            "required": true
+                        },
+                        {
+                            "code": "",
+                            "name": "pis",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 10,
+                            "GUID": "c2a84329-55ed-11ec-9353-090e17d88b3d",
+                            "required": true
+                        },
+                        {
+                            "code": "",
+                            "name": "porta",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 10,
+                            "GUID": "c2a8432a-55ed-11ec-9353-090e17d88b3d",
+                            "required": true
+                        },
+                        {
+                            "code": "",
+                            "name": "ciutat",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 20,
+                            "GUID": "c2a8432b-55ed-11ec-9353-090e17d88b3d",
+                            "required": true
+                        },
+                        {
+                            "code": "",
+                            "name": "codiPostal",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 8,
+                            "GUID": "c2a8432c-55ed-11ec-9353-090e17d88b3d",
+                            "required": true,
+                            "error": {}
+                        },
+                        {
+                            "code": "",
+                            "name": "pais",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 50,
+                            "GUID": "c2a8432d-55ed-11ec-9353-090e17d88b3d",
+                            "required": true
+                        }
+                    ],
+                    "additionalProperties": false,
+                    "GUID": "c2a84326-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "GUID": "c2c6c7a1-55ed-11ec-9353-090e17d88b3d",
+                "properties": []
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [
+                {
+                    "key": [],
+                    "name": "_id_",
+                    "GUID": "c2c73cd0-55ed-11ec-9353-090e17d88b3d"
+                }
+            ],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "c2c6c7a0-55ed-11ec-9353-090e17d88b3d",
+            "bucketId": "c2c80020-55ed-11ec-9353-090e17d88b3d",
+            "code": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        },
+        {
+            "collectionName": "ulleres",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "",
+                    "name": "ulleraId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "mode": "integer32",
+                    "GUID": "c2a8432f-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "minimum": 1,
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "graduacioEsquerra",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "mode": "double",
+                    "GUID": "c2a84330-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "minimum": 0
+                },
+                {
+                    "code": "",
+                    "name": "graduacioDreta",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "mode": "double",
+                    "GUID": "c2a84331-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "minimum": 0
+                },
+                {
+                    "code": "",
+                    "name": "tipusMuntura",
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "c2a84332-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "error": {
+                        "enum": false,
+                        "enums": [
+                            false,
+                            false,
+                            false
+                        ],
+                        "exampleItems": [
+                            false,
+                            false,
+                            false
+                        ]
+                    },
+                    "enum": [
+                        "flotant",
+                        "pasta",
+                        "metàl·lica"
+                    ]
+                },
+                {
+                    "code": "",
+                    "name": "colorMuntura",
+                    "isActivated": true,
+                    "type": "string",
+                    "maxLength": 50,
+                    "GUID": "c2a84333-55ed-11ec-9353-090e17d88b3d",
+                    "required": true
+                },
+                {
+                    "code": "",
+                    "name": "colorVidreEsquerra",
+                    "isActivated": true,
+                    "type": "string",
+                    "maxLength": 50,
+                    "GUID": "c2a84334-55ed-11ec-9353-090e17d88b3d",
+                    "required": true
+                },
+                {
+                    "code": "",
+                    "name": "colorVidreDreta",
+                    "isActivated": true,
+                    "type": "string",
+                    "maxLength": 50,
+                    "GUID": "c2a84335-55ed-11ec-9353-090e17d88b3d",
+                    "required": true
+                },
+                {
+                    "code": "",
+                    "name": "preu",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "mode": "double",
+                    "GUID": "c2a84336-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "minimum": 0
+                },
+                {
+                    "code": "",
+                    "name": "venutPer",
+                    "isActivated": true,
+                    "type": "string",
+                    "maxLength": 50,
+                    "GUID": "c2a84337-55ed-11ec-9353-090e17d88b3d",
+                    "required": true
+                },
+                {
+                    "code": "",
+                    "name": "venutData",
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "GUID": "c2a86a30-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "venutClientId",
+                    "isActivated": true,
+                    "type": "numeric",
+                    "mode": "integer32",
+                    "GUID": "c2a86a31-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "minimum": 1,
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "c2bb7d00-55ed-11ec-9353-090e17d88b3d",
+                    "foreignField": [
+                        "c2bb7d00-55ed-11ec-9353-090e17d88b3d",
+                        "c2a7f501-55ed-11ec-9353-090e17d88b3d"
+                    ],
+                    "parentRelationship": "b0e71490-575a-11ec-af96-c16fb1f8afb3",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "ulleresMarca",
+                    "isActivated": true,
+                    "type": "document",
+                    "properties": [
+                        {
+                            "code": "",
+                            "name": "compratProveidorId",
+                            "isActivated": true,
+                            "type": "numeric",
+                            "mode": "integer32",
+                            "GUID": "c2a86a33-55ed-11ec-9353-090e17d88b3d",
+                            "required": true,
+                            "relationshipType": "Foreign Key",
+                            "foreignCollection": "c2c6c7a0-55ed-11ec-9353-090e17d88b3d",
+                            "foreignField": [
+                                "c2c6c7a0-55ed-11ec-9353-090e17d88b3d",
+                                "c2a84321-55ed-11ec-9353-090e17d88b3d"
+                            ],
+                            "parentRelationship": "0750ed20-575a-11ec-bb0d-cd02d2e748bc",
+                            "minimum": 1,
+                            "error": {}
+                        },
+                        {
+                            "code": "",
+                            "name": "marcaNom",
+                            "isActivated": true,
+                            "type": "string",
+                            "maxLength": 50,
+                            "GUID": "c2a86a34-55ed-11ec-9353-090e17d88b3d",
+                            "required": true
+                        }
+                    ],
+                    "additionalProperties": false,
+                    "GUID": "c2a86a32-55ed-11ec-9353-090e17d88b3d",
+                    "required": true,
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "GUID": "c2c73cd2-55ed-11ec-9353-090e17d88b3d",
+                "properties": []
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Strict",
+            "validationAction": "Error",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [
+                {
+                    "key": [],
+                    "name": "_id_",
+                    "GUID": "c2c7b200-55ed-11ec-9353-090e17d88b3d"
+                }
+            ],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "c2c73cd1-55ed-11ec-9353-090e17d88b3d",
+            "bucketId": "c2c80020-55ed-11ec-9353-090e17d88b3d",
+            "code": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        }
+    ],
+    "buckets": [
+        {
+            "name": "optica",
+            "type": "bucket",
+            "collectionIds": [
+                "c2bb7d00-55ed-11ec-9353-090e17d88b3d",
+                "c2c6c7a0-55ed-11ec-9353-090e17d88b3d",
+                "c2c73cd1-55ed-11ec-9353-090e17d88b3d"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "GUID": "c2c80020-55ed-11ec-9353-090e17d88b3d",
+            "code": "",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
+        }
+    ],
+    "views": [],
+    "relationships": [
+        {
+            "name": "fk proveidors.proveidor_id to ulleres.ulleres_marca.comprat_a_proveidor_id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "c2c6c7a0-55ed-11ec-9353-090e17d88b3d",
+                    "c2a84321-55ed-11ec-9353-090e17d88b3d"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "c2c73cd1-55ed-11ec-9353-090e17d88b3d",
+                    "c2a86a32-55ed-11ec-9353-090e17d88b3d",
+                    "c2a86a33-55ed-11ec-9353-090e17d88b3d"
+                ]
+            ],
+            "childCardinality": "1",
+            "parentCollection": "c2c6c7a0-55ed-11ec-9353-090e17d88b3d",
+            "childCollection": "c2c73cd1-55ed-11ec-9353-090e17d88b3d",
+            "GUID": "0750ed20-575a-11ec-bb0d-cd02d2e748bc"
+        },
+        {
+            "name": "fk clients.client_id to ulleres.venut_a_client_id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "c2bb7d00-55ed-11ec-9353-090e17d88b3d",
+                    "c2a7f501-55ed-11ec-9353-090e17d88b3d"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "c2c73cd1-55ed-11ec-9353-090e17d88b3d",
+                    "c2a86a31-55ed-11ec-9353-090e17d88b3d"
+                ]
+            ],
+            "childCardinality": "1",
+            "parentCollection": "c2bb7d00-55ed-11ec-9353-090e17d88b3d",
+            "childCollection": "c2c73cd1-55ed-11ec-9353-090e17d88b3d",
+            "GUID": "b0e71490-575a-11ec-af96-c16fb1f8afb3"
+        },
+        {
+            "name": "fk clients.client_id to clients.recomenat_per_client_id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "c2bb7d00-55ed-11ec-9353-090e17d88b3d",
+                    "c2a7f501-55ed-11ec-9353-090e17d88b3d"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "c2bb7d00-55ed-11ec-9353-090e17d88b3d",
+                    "c2a81c22-55ed-11ec-9353-090e17d88b3d"
+                ]
+            ],
+            "childCardinality": "1",
+            "parentCollection": "c2bb7d00-55ed-11ec-9353-090e17d88b3d",
+            "childCollection": "c2bb7d00-55ed-11ec-9353-090e17d88b3d",
+            "GUID": "b2d995c0-575a-11ec-af96-c16fb1f8afb3"
+        }
+    ],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "c2c80020-55ed-11ec-9353-090e17d88b3d": "optica",
+        "c2a7f501-55ed-11ec-9353-090e17d88b3d": "clientId",
+        "c2a81c16-55ed-11ec-9353-090e17d88b3d": "nom",
+        "c2a81c17-55ed-11ec-9353-090e17d88b3d": "primerCognom",
+        "c2a81c18-55ed-11ec-9353-090e17d88b3d": "segonCognom",
+        "c2a81c19-55ed-11ec-9353-090e17d88b3d": "telefon",
+        "c2a81c14-55ed-11ec-9353-090e17d88b3d": "correu",
+        "c2a81c15-55ed-11ec-9353-090e17d88b3d": "dataRegistre",
+        "c2a7f502-55ed-11ec-9353-090e17d88b3d": "clientsAdreca",
+        "c2a7f503-55ed-11ec-9353-090e17d88b3d": "carrer",
+        "c2a81c10-55ed-11ec-9353-090e17d88b3d": "numero",
+        "c2a81c12-55ed-11ec-9353-090e17d88b3d": "pis",
+        "c2a81c13-55ed-11ec-9353-090e17d88b3d": "porta",
+        "c2a7f504-55ed-11ec-9353-090e17d88b3d": "ciutat",
+        "c2a7f505-55ed-11ec-9353-090e17d88b3d": "codiPostal",
+        "c2a81c11-55ed-11ec-9353-090e17d88b3d": "pais",
+        "c2a81c22-55ed-11ec-9353-090e17d88b3d": "recomenatPerClientId",
+        "c2bb7d00-55ed-11ec-9353-090e17d88b3d": "clients",
+        "c2a84321-55ed-11ec-9353-090e17d88b3d": "proveidorId",
+        "c2a84322-55ed-11ec-9353-090e17d88b3d": "nom",
+        "c2a84323-55ed-11ec-9353-090e17d88b3d": "telefon",
+        "c2a84324-55ed-11ec-9353-090e17d88b3d": "fax",
+        "c2a84325-55ed-11ec-9353-090e17d88b3d": "nif",
+        "c2a84326-55ed-11ec-9353-090e17d88b3d": "proveidorsAdreca",
+        "c2a84327-55ed-11ec-9353-090e17d88b3d": "carrer",
+        "c2a84328-55ed-11ec-9353-090e17d88b3d": "numero",
+        "c2a84329-55ed-11ec-9353-090e17d88b3d": "pis",
+        "c2a8432a-55ed-11ec-9353-090e17d88b3d": "porta",
+        "c2a8432b-55ed-11ec-9353-090e17d88b3d": "ciutat",
+        "c2a8432c-55ed-11ec-9353-090e17d88b3d": "codiPostal",
+        "c2a8432d-55ed-11ec-9353-090e17d88b3d": "pais",
+        "c2c6c7a0-55ed-11ec-9353-090e17d88b3d": "proveidors",
+        "c2a8432f-55ed-11ec-9353-090e17d88b3d": "ulleraId",
+        "c2a84330-55ed-11ec-9353-090e17d88b3d": "graduacioEsquerra",
+        "c2a84331-55ed-11ec-9353-090e17d88b3d": "graduacioDreta",
+        "c2a84332-55ed-11ec-9353-090e17d88b3d": "tipusMuntura",
+        "c2a84333-55ed-11ec-9353-090e17d88b3d": "colorMuntura",
+        "c2a84334-55ed-11ec-9353-090e17d88b3d": "colorVidreEsquerra",
+        "c2a84335-55ed-11ec-9353-090e17d88b3d": "colorVidreDreta",
+        "c2a84336-55ed-11ec-9353-090e17d88b3d": "preu",
+        "c2a84337-55ed-11ec-9353-090e17d88b3d": "venutPer",
+        "c2a86a30-55ed-11ec-9353-090e17d88b3d": "venutData",
+        "c2a86a31-55ed-11ec-9353-090e17d88b3d": "venutClientId",
+        "c2a86a32-55ed-11ec-9353-090e17d88b3d": "ulleresMarca",
+        "c2a86a33-55ed-11ec-9353-090e17d88b3d": "compratProveidorId",
+        "c2a86a34-55ed-11ec-9353-090e17d88b3d": "marcaNom",
+        "c2c73cd1-55ed-11ec-9353-090e17d88b3d": "ulleres",
+        "0750ed20-575a-11ec-bb0d-cd02d2e748bc": "fk proveidors.proveidor_id to ulleres.ulleres_marca.comprat_a_proveidor_id",
+        "b0e71490-575a-11ec-af96-c16fb1f8afb3": "fk clients.client_id to ulleres.venut_a_client_id",
+        "b2d995c0-575a-11ec-af96-c16fb1f8afb3": "fk clients.client_id to clients.recomenat_per_client_id"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "c4b40391-55eb-11ec-9353-090e17d88b3d"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "c4b40393-55eb-11ec-9353-090e17d88b3d"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "c4b40392-55eb-11ec-9353-090e17d88b3d"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "v5.0",
+    "dbVendor": "MongoDB",
+    "appTarget": "MONGODB",
+    "creationTS": "2021-12-05T16:52:44.745Z",
+    "GUID": "c4b40390-55eb-11ec-9353-090e17d88b3d",
+    "isLineageEnabled": false,
+    "lastModifTS": "2021-12-08T20:14:37.518Z",
+    "persistenceSchemaVersion": "5",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "5.3.0"
+    },
+    "hackoladeMeta": {},
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "c2bb7d00-55ed-11ec-9353-090e17d88b3d",
+                        "x": 81,
+                        "y": 129,
+                        "width": 279,
+                        "height": 321,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "c2c6c7a0-55ed-11ec-9353-090e17d88b3d",
+                        "x": 92,
+                        "y": 519,
+                        "width": 256,
+                        "height": 267,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "c2c73cd1-55ed-11ec-9353-090e17d88b3d",
+                        "x": 570,
+                        "y": 300,
+                        "width": 300,
+                        "height": 285,
+                        "color": {}
+                    }
+                ],
+                "buckets": [
+                    {
+                        "x": 41,
+                        "y": 89,
+                        "GUID": "c2c80020-55ed-11ec-9353-090e17d88b3d"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": []
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}
